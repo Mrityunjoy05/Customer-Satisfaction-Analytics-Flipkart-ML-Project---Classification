@@ -2,39 +2,53 @@
 
 ## Project Summary
 
-In the competitive **e-commerce** industry, **customer satisfaction** plays a vital role in maintaining **brand loyalty** and driving **long-term growth**. This project focuses on analyzing **85K+ Flipkart customer interactions** to identify **key factors** influencing **Customer Satisfaction (CSAT) scores**. Using **advanced machine learning techniques**, the project **predicts satisfaction levels** and provides **actionable insights** to enhance **support performance** and **response quality**.
+In the competitive **e-commerce** industry, **customer satisfaction** plays a crucial role in maintaining **brand loyalty** and driving **long-term growth**. This project analyzes **85K+ Flipkart customer interactions** to identify **key factors** influencing **Customer Satisfaction (CSAT) scores**. Using **advanced machine learning techniques**, the project **predicts satisfaction levels** and provides **actionable insights** to enhance **support performance** and **response quality**.
 
 ## Dataset Overview
 
-The dataset contains over **85,000 customer service records** from Flipkart’s **support channels**, and **satisfaction metrics**. It includes key attributes such as **interaction details** (Channel, Category, Sub-category, Issue Reported, Response Times), **customer and order information** (Order ID, Product Category, City, Item Price), and **agent metrics** (Agent Name, Tenure Bucket, Shift, Supervisor, Manager).
+The dataset consists of over **85,000 customer service records** from Flipkart’s **support channels**, including **satisfaction metrics**. Key attributes include:
 
-The **target variable** is **CSAT Score (Customer Satisfaction Score)**, measuring overall **satisfaction** with the **service experience**.
+* **Interaction details**: Channel, Category, Sub-category, Issue Reported, Response Times  
+* **Customer and order information**: Order ID, Product Category, City, Item Price  
+* **Agent metrics**: Agent Name, Tenure Bucket, Shift, Supervisor, Manager  
+
+The **target variable** is **CSAT Score (Customer Satisfaction Score)**, representing overall **customer satisfaction** with the service experience.
 
 ## Analysis Approach
 
-The project follows a systematic **machine learning workflow**:
+The project follows a structured **machine learning workflow**:
 
-* **Data Preprocessing**: Cleaned and refined **85K+ records** using **null imputation**, **duplicate removal**, and **feature encoding**.
+* **Data Preprocessing**: Cleaned and refined **85K+ records** using **null imputation**, **duplicate removal**, and **feature encoding**.  
+* **Feature Engineering**: Created **4+ new attributes** (e.g., **Response Time**, **Agent Workload**) to improve **model interpretability**.  
+* **Model Building**: Developed **classification models** (**Decision Tree, Random Forest, XGBoost**) to predict **five CSAT classes**.  
+* **Evaluation**: Compared model performance using **Accuracy**, **Precision**, **Recall**, **F1 Score**, and **Weighted ROC-AUC**.
 
-* **Feature Engineering**: Created **4+ new attributes** (e.g., **response efficiency**, **complaint frequency**) to improve **model interpretability**.
+## Model Performance
 
-* **Model Building**: Developed **classification models** (**Logistic Regression, Random Forest, XGBoost**) to predict **five CSAT classes**.
+| Model                   | Accuracy | Precision | Recall  | F1 Score | Weighted ROC-AUC |
+|-------------------------|----------|-----------|---------|----------|-----------------|
+| Decision Tree (GS)      | 0.8791   | 0.9002    | 0.8791  | 0.8872   | 0.9647          |
+| Random Forest (Base)    | 0.9376   | 0.9352    | 0.9376  | 0.9341   | 0.9516          |
+| XGBoost (GS)            | 0.9428   | 0.9420    | 0.9428  | 0.9393   | 0.9689          |
 
-* **Evaluation**: Selected the **best-performing model** using **accuracy**, **Weighted F1**, **Precision**, and **ROC-AUC metrics**.
+**Insights from Performance**:
+
+* **XGBoost (GS)** achieved the **highest overall performance**, making it the **preferred model** for CSAT prediction.  
+* **Random Forest** also performed strongly and can serve as a reliable alternative.  
+* **Decision Tree**, while simpler, shows slightly lower accuracy and F1 scores but provides interpretable insights into key CSAT drivers.
 
 ## Key Outcomes
 
-* Evaluated **85K+ customer interactions** to identify **key CSAT drivers**.
-* Refined dataset to **100% reliability** through **cleaning** and **feature engineering**.
-* Achieved **93.2% accuracy** and **Weighted F1 Score: 0.929** in **CSAT prediction**.
-* Delivered strong performance with **Weighted Precision: 0.93** and **ROC-AUC: 0.94**, offering **actionable insights** for **service improvement**.
+* Evaluated **85K+ customer interactions** to identify **key CSAT drivers**.  
+* Cleaned and refined dataset to ensure **100% reliability**.  
+* Achieved **XGBoost accuracy: 94.28%**, **Weighted F1 Score: 0.9393**, **Precision: 0.9420**, and **Weighted ROC-AUC: 0.9689**, delivering **actionable insights** for service improvement.  
 
 ## Tools & Technologies
 
-* **Python**: Data analysis and **machine learning**
-* **Pandas, NumPy**: Data preprocessing and **feature engineering**
-* **Scikit-learn, XGBoost**: **Model training and evaluation**
+* **Python**: Data analysis and **machine learning**  
+* **Pandas, NumPy**: Data preprocessing and **feature engineering**  
+* **Scikit-learn, XGBoost**: **Model training and evaluation**  
 
 ## Conclusion
 
-This project effectively leverages **machine learning** to analyze **customer feedback** and **predict satisfaction outcomes**. The insights derived enable Flipkart to **optimize customer service strategies**, **improve response efficiency**, and enhance **overall customer experience**.
+This project demonstrates how **machine learning** can be applied to analyze **customer feedback** and **predict satisfaction outcomes**. The derived insights enable Flipkart to **optimize customer service strategies**, **improve response efficiency**, and enhance **overall customer experience**.
